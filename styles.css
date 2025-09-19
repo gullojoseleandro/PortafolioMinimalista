@@ -19,7 +19,7 @@
   --neutral-900: #0f172a;
 
   /* Tokens derivados */
-  --fondo: #f6fbfa; 
+  --fondo: #f6fbfa;
   --texto: var(--neutral-800);
   --suave: var(--neutral-100);
   --texto-suave: var(--neutral-500);
@@ -27,7 +27,8 @@
   --texto-acento: #ffffff;
 
   --radio-borde: 0.75rem;
-  --familia-fuente: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --familia-fuente: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   --borde-decorativo: var(--neutral-700);
   /* Alias para compatibilidad con snippet de smallLine */
   --color-borde: var(--borde-decorativo);
@@ -65,14 +66,14 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
-  display: flex;           
-  flex-direction: column;  
-  gap: 0;                  
-  padding-top: 2rem;       
-  padding-bottom: 2rem;    
-  padding-left: 1.5rem;    
-  padding-right: 1.5rem;   
-  width: 100%;             
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: 100%;
 }
 
 /* Navegación */
@@ -80,7 +81,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0; 
+  margin-bottom: 0;
   padding: 1rem 0;
 }
 
@@ -97,7 +98,7 @@ body {
 }
 
 .nombre-logo {
-  font-size: 1.125rem; 
+  font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0.25rem;
@@ -145,7 +146,12 @@ body {
 
 .linea-separador {
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--neutral-300), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--neutral-300),
+    transparent
+  );
   flex: 1;
   max-width: 400px;
 }
@@ -173,7 +179,7 @@ body {
 }
 
 #proyectos > a + a {
-  margin-top: 1.25rem; 
+  margin-top: 1.25rem;
 }
 
 #proyectos > a h3 {
@@ -211,7 +217,7 @@ body {
 
 /* Sección hero */
 .seccion-hero {
-  margin-top: 2rem; 
+  margin-top: 2rem;
   margin-bottom: 3rem;
   max-width: 800px;
   user-select: none;
@@ -221,14 +227,14 @@ body {
   font-size: clamp(2rem, 5vw, 2.1rem);
   font-weight: 700;
   line-height: 1.1;
-  display: flex;   
-  gap: 0.5rem;    
-  margin-top: 0; 
-  margin-bottom: .6rem;
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0.6rem;
 }
 
 .descripcion-hero {
-  font-size: 1rem; 
+  font-size: 1rem;
   color: var(--texto-suave);
   line-height: 1.6;
 }
@@ -240,46 +246,54 @@ body {
 
 /* Espacio del proyecto */
 .espacio-proyecto {
-  width: 100%;         
-  margin: 0 auto;      
+  width: 100%;
+  margin: 0 auto;
   position: relative;
-  display: flex;       
+  display: flex;
   flex-direction: column;
-  gap: 1.5rem;         
-  padding-left: 1.5rem; 
-  padding-right: 1.5rem; 
-  padding-top: 0.5rem;   
+  gap: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
   padding-bottom: 2.5rem;
 }
 
 .navegacion-proyecto {
   margin-bottom: 2rem;
-  display: flex;               
+  display: flex;
   justify-content: space-between;
-  width: 100%;                 
+  width: 100%;
 }
 
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
   .contenido-principal {
-    padding-left: 0;   
-    padding-right: 0;  
-    width: 66.6667%;   
+    padding-left: 0;
+    padding-right: 0;
+    width: 66.6667%;
   }
   .espacio-proyecto {
-    padding-left: 0;   
-    padding-right: 0;  
-    width: 66.6667%;   
+    padding-left: 0;
+    padding-right: 0;
+    width: 66.6667%;
   }
 }
 
-@media (min-width: 1024px) { 
-  .contenido-principal { width: 50%; }     
-  .espacio-proyecto { width: 66.6667%; }  
+@media (min-width: 1024px) {
+  .contenido-principal {
+    width: 50%;
+  }
+  .espacio-proyecto {
+    width: 66.6667%;
+  }
 }
 
-@media (min-width: 1536px) { 
-  .contenido-principal { width: 33.3333%; } 
-  .espacio-proyecto { width: 50%; }        
+@media (min-width: 1536px) {
+  .contenido-principal {
+    width: 33.3333%;
+  }
+  .espacio-proyecto {
+    width: 50%;
+  }
 }
 
 .boton-volver {
@@ -295,8 +309,6 @@ body {
   padding: 0.5rem 0;
 }
 
-
-
 .contenido-proyecto {
   display: flex;
   flex-direction: column;
@@ -310,7 +322,7 @@ body {
 }
 
 .contenido-proyecto h1 {
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -339,7 +351,7 @@ body {
 .contenido-proyecto p {
   font-size: 1.1rem;
   line-height: 1.5;
-  color: rgba(51, 65, 85, 0.65); 
+  color: rgba(51, 65, 85, 0.65);
 }
 
 .contenido-proyecto strong {
@@ -350,12 +362,19 @@ body {
 .contenido-proyecto .contenedor-linea {
   width: 100%;
   height: 2px;
-  margin: 1.25rem 0; 
-  background: linear-gradient(90deg, transparent, var(--neutral-300), transparent);
+  margin: 1.25rem 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--neutral-300),
+    transparent
+  );
 }
 
 /* Separador simple (sin diagonales) */
-.contenido-proyecto .contenedor-linea .linea-pequena { display: none; }
+.contenido-proyecto .contenedor-linea .linea-pequena {
+  display: none;
+}
 
 /* Efecto hover del botón volver (icono) */
 #volver svg {
@@ -428,7 +447,7 @@ body {
   }
 
   .navegacion {
-    margin-bottom: 3rem;
+    margin-bottom: 0.75rem;
   }
 
   .nombre-logo {
@@ -440,7 +459,8 @@ body {
   }
 
   .seccion-hero {
-    margin-bottom: 4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
   }
 
   .espacio-proyecto {
@@ -466,6 +486,27 @@ body {
   .descripcion-hero {
     font-size: 1.125rem;
   }
+
+  .seccion-hero {
+    margin-top: 0.5rem;
+  }
+
+  .pie .contenido-pie {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .texto-pie,
+  .enlace-pie {
+    font-size: 0.8rem;
+  }
+
+  .separador-pie {
+    margin: 0 0.25rem;
+  }
+
   .contenido-proyecto {
     padding: 1rem;
   }
