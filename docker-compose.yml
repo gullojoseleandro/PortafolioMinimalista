@@ -5,11 +5,12 @@ services:
     image: nginx:alpine
     container_name: portfolio
     volumes:
-      - ./simpleportfolio:/usr/share/nginx/html:ro
+      - /home/desarrollo/www/PortafolioMinimalista:/usr/share/nginx/html:ro
     networks:
       - main_proxy
     labels:
       - "VIRTUAL_HOST=jlgdev.com"
+      - "VIRTUAL_PORT=80"
       - "LETSENCRYPT_HOST=jlgdev.com"
       - "LETSENCRYPT_EMAIL=leandrosec19@gmail.com"
 
