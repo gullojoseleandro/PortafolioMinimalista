@@ -1,0 +1,472 @@
+:root {
+  /* Primarios (teal suave) */
+  --primary-50: #eef8f7;
+  --primary-100: #d9f1ef;
+  --primary-500: #5aa7a4;
+  --primary-600: #4b9390;
+  --primary-700: #3f7d7a;
+
+  /* Neutros (slate suaves) */
+  --neutral-50: #f7f9fb;
+  --neutral-100: #eef2f5;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-400: #94a3b8;
+  --neutral-500: #64748b;
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-800: #1f2937;
+  --neutral-900: #0f172a;
+
+  /* Tokens derivados */
+  --fondo: #f6fbfa; 
+  --texto: var(--neutral-800);
+  --suave: var(--neutral-100);
+  --texto-suave: var(--neutral-500);
+  --acento: var(--primary-600);
+  --texto-acento: #ffffff;
+
+  --radio-borde: 0.75rem;
+  --familia-fuente: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --borde-decorativo: var(--neutral-700);
+  /* Alias para compatibilidad con snippet de smallLine */
+  --color-borde: var(--borde-decorativo);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--familia-fuente);
+  background-color: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Diseño principal */
+.contenedor-principal {
+  min-height: 100vh;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-weight: 500;
+}
+
+.contenido-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;           
+  flex-direction: column;  
+  gap: 0;                  
+  padding-top: 2rem;       
+  padding-bottom: 2rem;    
+  padding-left: 1.5rem;    
+  padding-right: 1.5rem;   
+  width: 100%;             
+}
+
+/* Navegación */
+.navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0; 
+  padding: 1rem 0;
+}
+
+.enlace-logo {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.enlace-logo:hover {
+  opacity: 0.8;
+}
+
+.nombre-logo {
+  font-size: 1.125rem; 
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.subtitulo-logo {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--texto-suave);
+  font-style: italic;
+}
+
+.enlaces-sociales {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.enlace-social {
+  color: var(--texto-suave);
+  font-size: 1.25rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.enlace-social:hover {
+  color: var(--acento);
+  transform: translateY(-2px) scale(1.08);
+}
+
+/* Iconos SVG en enlaces sociales */
+.enlace-social svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  fill: currentColor;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.separador-seccion {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.linea-separador {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neutral-300), transparent);
+  flex: 1;
+  max-width: 400px;
+}
+
+.separador-proyectos {
+  margin: 0 0 1rem;
+}
+
+.etiqueta-separador {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--texto-suave);
+  background: var(--fondo);
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Lista de proyectos */
+#proyectos > a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+#proyectos > a + a {
+  margin-top: 1.25rem; 
+}
+
+#proyectos > a h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+#proyectos > a:hover h3 {
+  color: var(--acento);
+}
+
+#proyectos > a p {
+  font-size: 0.875rem;
+  color: var(--texto-suave);
+  max-width: 45ch;
+}
+
+#proyectos > a div {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+#proyectos > a svg {
+  transition: margin 0.1s ease;
+  width: 2rem;
+}
+
+#proyectos > a:hover svg {
+  margin-left: 10px;
+}
+
+/* Sección hero */
+.seccion-hero {
+  margin-top: 2rem; 
+  margin-bottom: 3rem;
+  max-width: 800px;
+  user-select: none;
+}
+
+.titulo-hero {
+  font-size: clamp(2rem, 5vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.1;
+  display: flex;   
+  gap: 0.5rem;    
+  margin-top: 0; 
+  margin-bottom: .6rem;
+}
+
+.descripcion-hero {
+  font-size: 1rem; 
+  color: var(--texto-suave);
+  line-height: 1.6;
+}
+
+/* Sección de proyectos */
+.seccion-proyectos {
+  margin-bottom: 4rem;
+}
+
+/* Espacio del proyecto */
+.espacio-proyecto {
+  width: 100%;         
+  margin: 0 auto;      
+  position: relative;
+  display: flex;       
+  flex-direction: column;
+  gap: 1.5rem;         
+  padding-left: 1.5rem; 
+  padding-right: 1.5rem; 
+  padding-top: 0.5rem;   
+  padding-bottom: 2.5rem;
+}
+
+.navegacion-proyecto {
+  margin-bottom: 2rem;
+  display: flex;               
+  justify-content: space-between;
+  width: 100%;                 
+}
+
+@media (min-width: 768px) { 
+  .contenido-principal {
+    padding-left: 0;   
+    padding-right: 0;  
+    width: 66.6667%;   
+  }
+  .espacio-proyecto {
+    padding-left: 0;   
+    padding-right: 0;  
+    width: 66.6667%;   
+  }
+}
+
+@media (min-width: 1024px) { 
+  .contenido-principal { width: 50%; }     
+  .espacio-proyecto { width: 66.6667%; }  
+}
+
+@media (min-width: 1536px) { 
+  .contenido-principal { width: 33.3333%; } 
+  .espacio-proyecto { width: 50%; }        
+}
+
+.boton-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--texto-suave);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0.5rem 0;
+}
+
+
+
+.contenido-proyecto {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contenido-proyecto img {
+  width: 100%;
+  border-radius: var(--radio-borde);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.contenido-proyecto h1 {
+  font-size: 1.5rem; 
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.contenido-proyecto h1 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.contenido-proyecto h1 a:hover {
+  color: var(--acento);
+}
+
+.contenido-proyecto h1 a:visited {
+  color: inherit;
+}
+
+.contenido-proyecto h1 a:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.contenido-proyecto p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: rgba(51, 65, 85, 0.65); 
+}
+
+.contenido-proyecto strong {
+  color: var(--texto);
+  font-weight: 600;
+}
+
+.contenido-proyecto .contenedor-linea {
+  width: 100%;
+  height: 2px;
+  margin: 1.25rem 0; 
+  background: linear-gradient(90deg, transparent, var(--neutral-300), transparent);
+}
+
+/* Separador simple (sin diagonales) */
+.contenido-proyecto .contenedor-linea .linea-pequena { display: none; }
+
+/* Efecto hover del botón volver (icono) */
+#volver svg {
+  transition: transform 0.1s ease-out;
+  margin-right: 4px;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+#volver:hover svg {
+  transform: translateX(-2px);
+}
+
+/* Pie de página */
+.pie {
+  border-top: 1px solid var(--neutral-200);
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.contenido-pie {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.texto-pie {
+  color: var(--texto-suave);
+  font-size: 0.875rem;
+  user-select: none;
+}
+
+.enlaces-pie {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.enlace-pie {
+  color: var(--texto-suave);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.enlace-pie:hover {
+  color: var(--acento);
+}
+
+.separador-pie {
+  color: var(--neutral-300);
+  user-select: none;
+}
+
+/* Clases utilitarias */
+.oculto {
+  display: none !important;
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+  .contenido-principal {
+    padding: 1rem;
+  }
+
+  .navegacion {
+    margin-bottom: 3rem;
+  }
+
+  .nombre-logo {
+    font-size: 1.25rem;
+  }
+
+  .enlaces-sociales {
+    gap: 1rem;
+  }
+
+  .seccion-hero {
+    margin-bottom: 4rem;
+  }
+
+  .espacio-proyecto {
+    padding: 1rem;
+  }
+
+  .contenido-proyecto h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navegacion {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .titulo-hero {
+    font-size: 1.75rem;
+  }
+
+  .descripcion-hero {
+    font-size: 1.125rem;
+  }
+  .contenido-proyecto {
+    padding: 1rem;
+  }
+}

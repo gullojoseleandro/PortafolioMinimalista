@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  portfolio:
+    image: nginx:alpine
+    container_name: portfolio
+    volumes:
+      - ./simpleportfolio:/usr/share/nginx/html:ro
+    networks:
+      - main_proxy
+    labels:
+      - "VIRTUAL_HOST=jlgdev.com"
+      - "LETSENCRYPT_HOST=jlgdev.com"
+      - "LETSENCRYPT_EMAIL=leandrosec19@gmail.com"
+
+networks:
+  main_proxy:
+    external: true
