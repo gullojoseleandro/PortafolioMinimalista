@@ -41,6 +41,7 @@ function animarCargaDePagina() {
     "#proyectos > a *",
     "#proyectos > div",
     "#pie > *",
+    "#boton-chat"
   ]
   let elementos = selectores.flatMap((sel) => Array.from(document.querySelectorAll(sel)))
   // Excluir elementos que pertenezcan al espacio de proyecto
@@ -274,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   // Efectos hover en enlaces sociales
   document.querySelectorAll(".enlace-social").forEach((link) => {
-    link.addEventListener("mouseenter", () => gsap.to(link, { scale: 1.1, rotation: 5, duration: 0.2 }))
-    link.addEventListener("mouseleave", () => gsap.to(link, { scale: 1, rotation: 0, duration: 0.2 }))
+    link.addEventListener("mouseenter", () => gsap.to(link, { scale: 1.3, rotation: 5, duration: 0.1 }))
+    link.addEventListener("mouseleave", () => gsap.to(link, { scale: 1, rotation: 0, duration: 0.3 }))
   })
 })
