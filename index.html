@@ -105,6 +105,22 @@
           </div>
         </a>
 
+        <a href="#?proyecto=03" proyecto="03" data-url="https://github.com/gullojoseleandro/michiguardian" class="tarjeta-proyecto">
+          <div class="numero-proyecto">03</div>
+          <div class="contenido-tarjeta">
+            <h3>Michiguardian</h3>
+            <p>
+              Bóveda de gestión de identidades con arquitectura Zero-Knowledge. Backend en Java 17/Spring Boot 3 con cifrado AES-256 en cliente, garantizando privacidad absoluta y sincronización segura bajo estándares bancarios.
+            </p>
+            <div class="accion-proyecto">
+              Ver caso de estudio
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M9.29 6.71L13.58 11l-4.29 4.29 1.42 1.42 5.71-5.71-5.71-5.71-1.42 1.42z" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
         <!-- Detalle de proyectos se abrirá al hacer click en los enlaces de arriba -->
       </section>
 
@@ -260,6 +276,36 @@
       Row Level Security (RLS) en Supabase para protección de datos.<br>
       Protección de rutas privadas con roles de usuario (Admin, User).<br>
       Validación de entradas y manejo de errores con feedback claro.
+    </div>
+  </section>
+
+  <section id="proyecto-03" class="oculto">
+    <div>
+      <strong>Resumen</strong><br><br>
+      Michiguardian es una infraestructura de gestión de secretos y bóveda de identidades diseñada bajo el paradigma de "Zero-Knowledge Architecture". Permite a los usuarios centralizar y resguardar credenciales críticas mediante cifrado de grado militar (AES-256) realizado íntegramente en el cliente, asegurando que ni siquiera el servidor tenga acceso a los datos originales.
+    </div>
+    <div>
+      <strong>Arquitectura y Backend</strong><br><br>
+      Backend robusto construido con Java 17 y Spring Boot 3.2.3 bajo los principios de Clean Architecture y DDD. Implementación de Spring Security para una protección por capas, junto con Spring Data JPA para la persistencia eficiente en MySQL.
+    </div>
+    <div>
+      <strong>Seguridad Avanzada</strong><br><br>
+      • Cifrado AES-256 GCM con derivación de claves maestras via Argon2.<br>
+      • Autenticación moderna con JWT (jjwt) y Refresh Tokens seguros.<br>
+      • Rate Limiting de grado industrial mediante Bucket4j para prevenir ataques de fuerza bruta.<br>
+      • Infraestructura preparada para WebAuthn y biometría (WebAuthn4j).<br>
+      • Sanitización dinámica de contenido utilizando JSoup.
+    </div>
+    <div>
+      <strong>Frontend Moderno</strong><br><br>
+      • Desarrollado con Next.js 15 y React 19 para una performance excepcional.<br>
+      • Animaciones táctiles y transiciones fluidas con GSAP y Framer Motion.<br>
+      • Diseño UI resiliente con Radix UI, Tailwind CSS 4 y gestión de estados con TanStack Query.
+    </div>
+    <div>
+      <strong>DevOps e Infraestructura</strong><br><br>
+      • Contenerización del ecosistema completo (Java API + Next.js App) mediante Docker y Docker Compose.<br>
+      • GitHub Actions para automatización de pipelines de integración continua (CI) y entrega continua (CD).
     </div>
   </section>
 
