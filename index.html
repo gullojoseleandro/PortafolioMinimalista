@@ -7,20 +7,16 @@
   <title>Leandro Gullo - Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-    as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-  </noscript>
-  <link rel="stylesheet" href="./styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./modern-styles.css" />
   <meta name="description" content="Leandro Gullo - Desarrollador Full Stack & Diseñador Digital" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Leandro Gullo - Portfolio" />
   <meta property="og:type" content="website" />
   <meta property="og:description" content="Desarrollador Full Stack & Diseñador Digital" />
-  <meta property="og:color" content="#4b9390" />
-  <meta name="theme-color" content="#f6fbfa" />
+  <meta property="og:color" content="#00f2fe" />
+  <meta name="theme-color" content="#0a0c10" />
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary_large_image" />
 </head>
@@ -56,24 +52,16 @@
                 d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm0 2v.01L12 13l8-6.99V6H4zm16 12V8l-8 6-8-6v10h16z" />
             </svg>
           </a>
-          <a href="https://wa.me/543489594918" class="enlace-social" aria-label="WhatsApp" target="_blank"
-            rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path
-                d="M12.004 2a9.99 9.99 0 00-8.65 14.99L2 22l5.09-1.334A9.99 9.99 0 1012.004 2zm0 18.2a8.2 8.2 0 01-4.186-1.154l-.3-.179-3.024.793.808-2.946-.196-.303A8.2 8.2 0 1112.004 20.2zm4.696-6.0c-.247-.123-1.46-.72-1.685-.803-.226-.082-.39-.123-.554.124-.164.247-.636.803-.78.968-.143.165-.287.185-.534.062-.247-.124-1.04-.383-1.98-1.223-.732-.653-1.226-1.459-1.37-1.706-.143-.247-.015-.38.108-.503.112-.112.247-.29.371-.434.123-.144.164-.247.247-.412.082-.165.041-.309-.02-.432-.062-.124-.554-1.337-.759-1.832-.2-.48-.403-.415-.554-.423l-.474-.008c-.164 0-.432.062-.657.309-.226.247-.86.84-.86 2.048s.88 2.377 1.003 2.542c.123.165 1.733 2.644 4.2 3.706.587.253 1.046.404 1.403.517.59.188 1.127.162 1.553.098.474-.071 1.46-.597 1.667-1.174.206-.576.206-1.07.144-1.174-.062-.103-.226-.165-.473-.288z" />
-            </svg>
-          </a>
         </div>
       </nav>
 
       <section id="hero" class="seccion-hero">
         <h1 class="titulo-hero">
-          <div>Hola</div>
-          <div>ッ</div>
+          <div>Transformando</div>
+          <div class="texto-gradiente">lógica en impacto.</div>
         </h1>
         <p class="descripcion-hero">
-          Combino código limpio con diseño intuitivo para construir aplicaciones web que no solo funcionan
-          perfectamente, sino que también inspiran.
+          Arquitecto de soluciones Full Stack enfocado en transformar visiones complejas en experiencias digitales fluidas, escalables y orientadas a resultados de alto impacto.
         </p>
       </section>
 
@@ -85,33 +73,35 @@
         </div>
 
         <!-- Ítems estilo lista -->
-        <a href="#?proyecto=01" proyecto="01" data-url="https://sanamenteonline.com/">
-          <h3>Sanamente Online</h3>
-          <p>
-            Conecta pacientes con psicólogos y gestiona el ciclo completo: registro, agendas y turnos, pagos y retiros,
-            reclamos, calificaciones y administración segura con JWT y roles. Incluye sistema de referidos y manejo de
-            caja.
-          </p>
-          <div>
-            Ver proyecto
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M9.29 6.71L13.58 11l-4.29 4.29 1.42 1.42 5.71-5.71-5.71-5.71-1.42 1.42z" />
-            </svg>
+        <a href="#?proyecto=01" proyecto="01" data-url="https://sanamenteonline.com/" class="tarjeta-proyecto">
+          <div class="numero-proyecto">01</div>
+          <div class="contenido-tarjeta">
+            <h3>Sanamente Online</h3>
+            <p>
+              Ecosistema integral de salud mental: gestión de flujos clínicos complejos, pasarelas de pago automatizadas, videollamadas encriptadas y arquitectura modular con seguridad de grado industrial.
+            </p>
+            <div class="accion-proyecto">
+              Ver caso de estudio
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M9.29 6.71L13.58 11l-4.29 4.29 1.42 1.42 5.71-5.71-5.71-5.71-1.42 1.42z" />
+              </svg>
+            </div>
           </div>
         </a>
 
-        <a href="#?proyecto=02" proyecto="02" data-url="https://mypubliclinks.jlgdev.com">
-          <h3>MyPublicLinks</h3>
-          <p>
-            Plataforma moderna de "Link in Bio" con perfiles personalizables, gestión de enlaces drag & drop, widgets
-            interactivos, plantillas prediseñadas, analíticas avanzadas y sistema de suscripciones con pagos integrados
-            (Stripe y MercadoPago).
-          </p>
-          <div>
-            Ver proyecto
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M9.29 6.71L13.58 11l-4.29 4.29 1.42 1.42 5.71-5.71-5.71-5.71-1.42 1.42z" />
-            </svg>
+        <a href="#?proyecto=02" proyecto="02" data-url="https://mypubliclinks.jlgdev.com" class="tarjeta-proyecto">
+          <div class="numero-proyecto">02</div>
+          <div class="contenido-tarjeta">
+            <h3>MyPublicLinks</h3>
+            <p>
+              Plataforma SaaS de micro-targeting y analíticas en tiempo real. Sistema de suscripciones dinámicas, personalización avanzada de UI y despliegue automatizado de micro-sitios de alto engagement.
+            </p>
+            <div class="accion-proyecto">
+              Ver caso de estudio
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M9.29 6.71L13.58 11l-4.29 4.29 1.42 1.42 5.71-5.71-5.71-5.71-1.42 1.42z" />
+              </svg>
+            </div>
           </div>
         </a>
 
@@ -133,36 +123,8 @@
       <div id="contenido-proyecto" class="contenido-proyecto"></div>
     </section>
 
-    <!-- Botón flotante para abrir el chat -->
-    <div id="boton-chat" onclick="toggleChat()">
-      <h7>💬 Chateá con mi clon</h7>
-    </div>
-
-    <!-- Caja de chat -->
-    <div id="contenedor-chatbot" style="display: none;">
-      <div id="encabezado-chat">👨‍💻 GulloBot</div>
-      <div id="cuerpo-chat">
-        <div id="respuesta-chat"></div>
-        <input id="entradaUsuario" type="text" placeholder="Escribí tu pregunta..." />
-        <button onclick="enviarMensaje()">Enviar</button>
-      </div>
-    </div>
-
-    <footer class="pie" id="pie">
-      <div class="contenido-pie">
-        <p class="texto-pie">Diseñado y desarrollado con ❤️ en 2025</p>
-        <span class="separador-pie">•</span>
-        <div class="enlaces-pie">
-          <a href="https://github.com/gullojoseleandro/PortafolioMinimalista" class="enlace-pie">Código fuente</a>
-        </div>
-      </div>
-    </footer>
-  </div>
-
   <!-- Contenido oculto del proyecto -->
   <section id="proyecto-01" class="oculto">
-    <img data-src="./assets/SanamenteOnline.gif" alt="Sanamente Online — Plataforma integral de telepsicología"
-      loading="lazy" decoding="async" />
     <div>
       <strong>Resumen</strong><br><br>
       Plataforma web que conecta pacientes con psicólogos para gestionar todo el ciclo de atención: registro, perfiles,
@@ -227,8 +189,6 @@
   </section>
 
   <section id="proyecto-02" class="oculto">
-    <img data-src="./assets/MyPublicLinks.png" alt="MyPublicLinks — Plataforma moderna de Link in Bio" loading="lazy"
-      decoding="async" />
     <div>
       <strong>Resumen</strong><br><br>
       Plataforma completa de "Link in Bio" que permite crear perfiles personalizados con enlaces, widgets interactivos,
@@ -303,9 +263,25 @@
     </div>
   </section>
 
-  <script src="/chatbot/chatbot.js"></script>
+  <footer id="pie" class="pie">
+    <div class="contenido-pie">
+      <div class="contacto-footer">
+        <span class="texto-pie">¿Tienes un desafío técnico? Platiquemos.</span>
+        <a href="https://wa.me/543489594918" class="enlace-whatsapp-pie" target="_blank" rel="noopener noreferrer">
+          Hablemos por WhatsApp
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12.004 2a9.99 9.99 0 00-8.65 14.99L2 22l5.09-1.334A9.99 9.99 0 1012.004 2zm0 18.2a8.2 8.2 0 01-4.186-1.154l-.3-.179-3.024.793.808-2.946-.196-.303A8.2 8.2 0 1112.004 20.2zm4.696-6.0c-.247-.123-1.46-.72-1.685-.803-.226-.082-.39-.123-.554.124-.164.247-.636.803-.78.968-.143.165-.287.185-.534.062-.247-.124-1.04-.383-1.98-1.223-.732-.653-1.226-1.459-1.37-1.706-.143-.247-.015-.38.108-.503.112-.112.247-.29.371-.434.123-.144.164-.247.247-.412.082-.165.041-.309-.02-.432-.062-.124-.554-1.337-.759-1.832-.2-.48-.403-.415-.554-.423l-.474-.008c-.164 0-.432.062-.657.309-.226.247-.86.84-.86 2.048s.88 2.377 1.003 2.542c.123.165 1.733 2.644 4.2 3.706.587.253 1.046.404 1.403.517.59.188 1.127.162 1.553.098.474-.071 1.46-.597 1.667-1.174.206-.576.206-1.07.144-1.174-.062-.103-.226-.165-.473-.288z" />
+          </svg>
+        </a>
+      </div>
+      <div class="separador-pie"></div>
+      <span class="texto-pie">© 2024 Leandro Gullo · Diseñando el futuro digital.</span>
+    </div>
+  </footer>
+
+
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script type="module" src="./script.js"></script>
 </body>
-
 </html>

@@ -6,7 +6,10 @@
 // 3) Carga inicial basada en parámetros de URL
 // Todas las funciones, variables y comentarios están en español para claridad.
 
-// Usar gsap global directamente; el script GSAP se carga con defer antes de este módulo
+// Usar gsap global directamente
+if (window.gsap) {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 let dentroProyecto = false
 
@@ -54,17 +57,34 @@ function animarCargaDePagina() {
   if (!elementos.length) return
 
   // Estado inicial optimizado para animación
-  gsap.set(elementos, { force3D: true, willChange: "transform, opacity, filter", opacity: 0, y: 20, filter: "blur(8px)" })
+  gsap.set(elementos, { force3D: true, willChange: "transform, opacity, filter", opacity: 0, y: 30, filter: "blur(10px)" })
 
   // Animación global simultánea con micro-stagger
   gsap.to(elementos, {
     opacity: 1,
     y: 0,
     filter: "none",
-    duration: 0.8,
-    ease: "power2.out",
-    stagger: { each: 0.02, from: 0 },
+    duration: 1.2,
+    ease: "expo.out",
+    stagger: { each: 0.03, from: 0 },
     clearProps: "transform,opacity,filter,willChange",
+  })
+
+  // Animación específica para las tarjetas de proyecto al hacer scroll
+  const tarjetas = document.querySelectorAll(".tarjeta-proyecto")
+  tarjetas.forEach((tarjeta, i) => {
+    gsap.from(tarjeta, {
+      scrollTrigger: {
+        trigger: tarjeta,
+        start: "top bottom-=100px",
+        toggleActions: "play none none none"
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      delay: i * 0.1,
+      ease: "power4.out"
+    })
   })
 }
 
@@ -79,15 +99,17 @@ async function abrirProyecto(proyectoId, elementoProyecto, desdeCarga = false) {
   dentroProyecto = true
 
   // Animación de salida del contenido principal
-  const tlSalida = gsap.timeline({ defaults: { ease: "power2.out" } })
+  const tlSalida = gsap.timeline({ defaults: { ease: "expo.inOut" } })
   if (!desdeCarga) {
     tlSalida
-      .to("#pie", { opacity: 0, y: 20, filter: "blur(1px)", duration: 0.3 })
-      .to(
-        "#contenido > *:not(.navegacion), #proyectos > *",
-        { opacity: 0, x: -60, filter: "blur(6px)", duration: 0.4, stagger: 0.05 },
-        ">",
-      )
+      .to("#contenido > *:not(.navegacion)", { 
+        opacity: 0, 
+        y: -30, 
+        filter: "blur(10px)", 
+        duration: 0.5, 
+        stagger: 0.05 
+      })
+      .to(".navegacion", { opacity: 0, duration: 0.3 }, "<")
   }
 
   // Esperar a que termine la animación de salida antes de cambiar de vista
@@ -157,9 +179,23 @@ async function abrirProyecto(proyectoId, elementoProyecto, desdeCarga = false) {
 
   // Entrada del detalle del proyecto
   gsap.fromTo(
+    "#espacio-proyecto",
+    { opacity: 0, y: 100 },
+    { opacity: 1, y: 0, duration: 0.8, ease: "expo.out" }
+  )
+
+  gsap.fromTo(
     "#volver, #contenido-proyecto > *",
-    { opacity: 0, x: -60, filter: "blur(6px)" },
-    { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.5, stagger: 0.06, ease: "power2.out" },
+    { opacity: 0, y: 30, filter: "blur(10px)" },
+    { 
+      opacity: 1, 
+      y: 0, 
+      filter: "blur(0px)", 
+      duration: 0.8, 
+      stagger: 0.08, 
+      ease: "expo.out",
+      delay: 0.2
+    },
   )
 }
 
@@ -171,13 +207,12 @@ async function cerrarProyecto() {
 
   // Salida del detalle de proyecto (en orden inverso)
   await new Promise((resolve) => {
-    gsap.to("#volver, #contenido-proyecto > *", {
+    gsap.to("#espacio-proyecto", {
       opacity: 0,
-      x: -50,
-      filter: "blur(6px)",
-      duration: 0.35,
-      stagger: { each: 0.05, from: "end" },
-      ease: "power2.out",
+      y: 50,
+      filter: "blur(10px)",
+      duration: 0.4,
+      ease: "expo.in",
       onComplete: resolve,
     })
   })
@@ -188,14 +223,16 @@ async function cerrarProyecto() {
 
   // Reaparecer contenido principal y footer simultáneamente
   gsap.fromTo(
-    "#contenido > *:not(.navegacion), #proyectos > *",
-    { opacity: 0, x: -50, filter: "blur(6px)" },
-    { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.5, stagger: 0.05, ease: "power2.out" },
-  )
-  gsap.fromTo(
-    "#pie",
-    { opacity: 0, y: 20, filter: "blur(6px)" },
-    { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.5, ease: "power2.out" },
+    "#contenido > *, #pie",
+    { opacity: 0, y: 30, filter: "blur(10px)" },
+    { 
+      opacity: 1, 
+      y: 0, 
+      filter: "blur(0px)", 
+      duration: 0.8, 
+      stagger: 0.05, 
+      ease: "expo.out" 
+    },
   )
 }
 
