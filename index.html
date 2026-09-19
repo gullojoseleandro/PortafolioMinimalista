@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./modern-styles.css" />
+  <link rel="stylesheet" href="./modern-styles.css?v=6" />
   <meta name="description" content="Leandro Gullo - Desarrollador Full Stack & Diseñador Digital" />
 
   <!-- Open Graph -->
@@ -105,7 +105,7 @@
           </div>
         </a>
 
-        <a href="#?proyecto=03" proyecto="03" data-url="https://github.com/gullojoseleandro/michiguardian" class="tarjeta-proyecto">
+        <a href="#?proyecto=03" proyecto="03" data-url="https://michiguardian.jlgdev.com" class="tarjeta-proyecto">
           <div class="numero-proyecto">03</div>
           <div class="contenido-tarjeta">
             <h3>Michiguardian</h3>
@@ -171,7 +171,7 @@
       CRUD de agendas con JWT; vistas por rol y utilidades de disponibilidad.<br>
       Expiración de agendas (administrativo).<br>
       Webhook público para pagos; conciliación, métricas financieras y retiros (aprobación/rechazo).<br>
-      Manejo de caja dentro de la app: apertura/cierre, conciliaciones y registro de movimientos.
+      Seguimiento de saldos y movimientos, con estadísticas de administración actualizadas en tiempo real vía WebSockets.
     </div>
     <div>
       <strong>Sistema de referidos</strong><br><br>
@@ -186,11 +186,11 @@
     </div>
     <div>
       <strong>Arquitectura y tecnologías</strong><br><br>
-      Frontend: React + TypeScript bajo Atomic Design, React‑Bootstrap, CSS Modules tipados, hooks reutilizables y
+      Frontend: Next.js + React + TypeScript bajo Atomic Design, React‑Bootstrap, CSS Modules tipados, hooks reutilizables y
       toasts unificados.<br>
       Backend: Node.js + Express, JWT, middleware de roles y rutas modulares (usuarios, terapeutas, pacientes, agendas,
       turnos, reclamos, calificaciones, movimientos, descuentos, obras sociales, tipos de terapia, notas).<br>
-      Integraciones: Daily API para videollamadas; Mercado Pago API para pagos (webhook para conciliación y retiros).
+      Integraciones: Daily API para videollamadas; Mercado Pago y PayPal para pagos (webhook para conciliación y retiros).
     </div>
     <div>
       <strong>Despliegue</strong><br><br>
@@ -200,7 +200,8 @@
     <div>
       <strong>Calidad, seguridad y mantenibilidad</strong><br><br>
       Separación de responsabilidades, validación de entradas y manejo de errores con mensajes claros (toasts).<br>
-      Políticas de acceso por rol y protección JWT.
+      Políticas de acceso por rol y protección JWT.<br>
+      Monitoreo de errores en producción con Sentry.
     </div>
   </section>
 
@@ -221,40 +222,40 @@
     <div>
       <strong>Perfiles y personalización</strong><br><br>
       Página de aterrizaje única con biografía, avatar y enlaces personalizables.<br>
-      Colores personalizados con soporte para degradados y 12 fuentes tipográficas.<br>
-      Animaciones de fondo (partículas, estrellas, olas, gradiente, nieve, confetti, aurora).<br>
-      Efectos de cursor interactivos (estelas, chispas, fuegos artificiales, burbujas).
+      Colores personalizados con soporte para degradados.<br>
+      Animaciones de fondo (partículas, ondas, gradiente, estrellas, matrix, mesh) y fondos 3D con react-three-fiber (mesh-gradient, retro-grid, liquid-fluid).<br>
+      12 efectos de cursor interactivos (estelas, chispas, fuegos artificiales, burbujas, nieve, confetti, entre otros).
     </div>
     <div>
       <strong>Gestión de enlaces y widgets</strong><br><br>
       Drag & Drop para reordenar enlaces fácilmente.<br>
       Estilos individuales por enlace (colores, fondos, bordes, sombras).<br>
-      Widgets dinámicos: carrusel de imágenes, productos, videos, música (Spotify), estadísticas sociales, testimonios,
-      eventos y bloques de texto.<br>
+      13 tipos de widgets dinámicos: carrusel de imágenes, productos, videos, música (Spotify), estadísticas sociales, testimonios,
+      eventos, experiencia laboral, proyectos, educación y bloques de texto.<br>
       Agrupación de enlaces en secciones organizadas con iconos personalizables.
     </div>
     <div>
       <strong>Sistema de plantillas</strong><br><br>
-      Más de 20 plantillas prediseñadas por industria.<br>
-      Categorías: Personal, Negocio, Creadores de Contenido, E-commerce, Servicios.<br>
-      Previsualización en vivo antes de aplicar con aplicación de estilos con un clic.
+      Más de 30 plantillas prediseñadas, aplicables con un clic.<br>
+      Presets rápidos por categoría: Personal, Negocio, Creadores de Contenido, E-commerce, Servicios.<br>
+      Previsualización en vivo antes de aplicar.
     </div>
     <div>
       <strong>Planes de suscripción</strong><br><br>
-      Free: 5 enlaces, 2 widgets, animaciones básicas.<br>
-      Starter ($9.99/mes): 15 enlaces, 5 widgets, todas las animaciones, analíticas avanzadas.<br>
-      Pro ($19.99/mes): Enlaces y widgets ilimitados, soporte prioritario, todas las características premium.
+      Free ($0): enlaces ilimitados, 3 widgets, 1 perfil.<br>
+      Starter ($2.99/mes): enlaces ilimitados, 10 widgets, 3 perfiles.<br>
+      Pro ($4.99/mes): todo ilimitado, dominio personalizado, insignia verificada y URLs cortas.
     </div>
     <div>
       <strong>Pagos y analíticas</strong><br><br>
       Integración con Stripe (pagos internacionales) y MercadoPago (Argentina).<br>
-      Conversión automática de divisas USD ↔ ARS.<br>
+      Conversión automática entre 5 divisas (USD, ARS, EUR, BRL, MXN).<br>
       Seguimiento de eventos: visitas, clics, conversiones con geolocalización.<br>
       Gráficos interactivos de rendimiento y análisis de CTR por enlace.
     </div>
     <div>
       <strong>Stack tecnológico</strong><br><br>
-      Frontend: React 18.3.1 + TypeScript 5.6.2, Vite 5.4.10, Tailwind CSS 3.4.17.<br>
+      Frontend: React 19.2.3 + TypeScript 5.9.3, Vite 7.3.0, Tailwind CSS 4.1.18.<br>
       Librerías: React Router 7.9.6, React Query 5.90.10, DnD Kit 6.3.1, Anime.js 4.2.2.<br>
       Backend: Supabase (Auth, PostgreSQL, Storage, Edge Functions, Realtime).<br>
       Integraciones: Stripe, MercadoPago, Google OAuth, analíticas personalizadas.
@@ -290,22 +291,21 @@
     </div>
     <div>
       <strong>Seguridad Avanzada</strong><br><br>
-      • Cifrado AES-256 GCM con derivación de claves maestras via Argon2.<br>
-      • Autenticación moderna con JWT (jjwt) y Refresh Tokens seguros.<br>
+      • Cifrado AES-256 realizado íntegramente en el cliente, con derivación de claves via PBKDF2.<br>
+      • Autenticación moderna con JWT (jjwt), Refresh Tokens seguros y hashing de contraseñas con BCrypt.<br>
       • Rate Limiting de grado industrial mediante Bucket4j para prevenir ataques de fuerza bruta.<br>
-      • Infraestructura preparada para WebAuthn y biometría (WebAuthn4j).<br>
-      • Sanitización dinámica de contenido utilizando JSoup.
+      • Autenticación biométrica sin contraseña (passkeys) con WebAuthn4j, incluyendo flujo de vinculación por QR.<br>
+      • Verificación de contraseñas filtradas (breach-checking) y sanitización dinámica de contenido con JSoup.
     </div>
     <div>
       <strong>Frontend Moderno</strong><br><br>
-      • Desarrollado con Next.js 15 y React 19 para una performance excepcional.<br>
+      • Desarrollado con Next.js 15 y React 19 para una performance excepcional, con soporte PWA.<br>
       • Animaciones táctiles y transiciones fluidas con GSAP y Framer Motion.<br>
       • Diseño UI resiliente con Radix UI, Tailwind CSS 4 y gestión de estados con TanStack Query.
     </div>
     <div>
       <strong>DevOps e Infraestructura</strong><br><br>
-      • Contenerización del ecosistema completo (Java API + Next.js App) mediante Docker y Docker Compose.<br>
-      • GitHub Actions para automatización de pipelines de integración continua (CI) y entrega continua (CD).
+      • Contenerización del ecosistema completo (Java API + Next.js App) mediante Docker y Docker Compose.
     </div>
   </section>
 
@@ -321,13 +321,13 @@
         </a>
       </div>
       <div class="separador-pie"></div>
-      <span class="texto-pie">© 2024 Leandro Gullo · Diseñando el futuro digital.</span>
+      <span class="texto-pie">© 2026 Leandro Gullo · Diseñando el futuro digital.</span>
     </div>
   </footer>
 
 
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script type="module" src="./script.js"></script>
+  <script type="module" src="./script.js?v=6"></script>
 </body>
 </html>

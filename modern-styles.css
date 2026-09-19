@@ -304,6 +304,17 @@ body::before {
   border-color: var(--texto-suave);
 }
 
+.boton-volver svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.boton-volver:hover svg {
+  transform: translateX(-4px);
+}
+
 .contenido-proyecto h1 {
   font-family: var(--familia-header);
   font-size: 3.5rem;
@@ -313,12 +324,28 @@ body::before {
 }
 
 .contenido-proyecto h1 a {
-  text-decoration: none;
   color: inherit;
   background: var(--gradiente-primario);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-decoration: underline;
+  text-decoration-color: var(--primario);
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 2px;
+  transition: var(--transicion);
+}
+
+.contenido-proyecto h1 a::after {
+  content: "↗";
+  -webkit-text-fill-color: var(--primario);
+  margin-left: 0.3em;
+  font-size: 0.6em;
+  vertical-align: middle;
+}
+
+.contenido-proyecto h1 a:hover {
+  opacity: 0.8;
 }
 
 .contenido-proyecto img, .contenido-proyecto video {

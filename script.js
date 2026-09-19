@@ -122,6 +122,7 @@ async function abrirProyecto(proyectoId, elementoProyecto, desdeCarga = false) {
   // Mostrar contenedor de proyecto
   document.getElementById("contenido").style.display = "none"
   document.getElementById("espacio-proyecto").classList.remove("oculto")
+  window.scrollTo(0, 0)
 
   // Preparar contenido del proyecto
   const proyectoFuente = document.getElementById(`proyecto-${proyectoId}`)
@@ -180,21 +181,21 @@ async function abrirProyecto(proyectoId, elementoProyecto, desdeCarga = false) {
   // Entrada del detalle del proyecto
   gsap.fromTo(
     "#espacio-proyecto",
-    { opacity: 0, y: 100 },
-    { opacity: 1, y: 0, duration: 0.8, ease: "expo.out" }
+    { opacity: 0, y: 100, filter: "blur(10px)" },
+    { opacity: 1, y: 0, filter: "none", duration: 0.8, ease: "expo.out", clearProps: "filter" }
   )
 
   gsap.fromTo(
     "#volver, #contenido-proyecto > *",
-    { opacity: 0, y: 30, filter: "blur(10px)" },
-    { 
-      opacity: 1, 
-      y: 0, 
-      filter: "blur(0px)", 
-      duration: 0.8, 
-      stagger: 0.08, 
+    { opacity: 0, y: 30 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.08,
       ease: "expo.out",
-      delay: 0.2
+      delay: 0.2,
+      clearProps: "transform",
     },
   )
 }
