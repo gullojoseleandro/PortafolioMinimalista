@@ -1,6 +1,7 @@
 name: Container
 
 on:
+  pull_request:
   push:
     branches: [master]
 
@@ -13,13 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      - name: Build and publish
+      - name: Build image
+        run: |
+          image="ghcr.io/${GITHUB_REPOSITORY,,}"
+          docker build --pull -t "$image:sha-$GITHUB_SHA" -t "$image:master" .
+      - name: Publish image
+        if: github.event_name == 'push'
         env:
           GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           image="ghcr.io/${GITHUB_REPOSITORY,,}"
           echo "$GHCR_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
-          docker build --pull -t "$image:sha-$GITHUB_SHA" -t "$image:master" .
           docker push "$image:sha-$GITHUB_SHA"
           docker push "$image:master"
-
