@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanamente Online · Caso de estudio | Leandro Gullo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/modern-styles.css?v=6" />
+  <meta name="description" content="Caso de estudio de Sanamente Online: plataforma de salud mental con agendas, pagos, videollamadas encriptadas y arquitectura segura. Desarrollada por Leandro Gullo." />
+  <link rel="canonical" href="https://jlgdev.com/proyectos/sanamente-online/" />
+  <meta property="og:title" content="Sanamente Online · Caso de estudio | Leandro Gullo" />
+  <meta property="og:description" content="Caso de estudio de Sanamente Online: plataforma de salud mental con agendas, pagos, videollamadas encriptadas y arquitectura segura." />
+  <meta property="og:url" content="https://jlgdev.com/proyectos/sanamente-online/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Leandro Gullo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://jlgdev.com/proyectos/sanamente-online/#webpage",
+    "url": "https://jlgdev.com/proyectos/sanamente-online/",
+    "name": "Sanamente Online · Caso de estudio",
+    "description": "Caso de estudio de Sanamente Online: plataforma de salud mental con agendas, pagos, videollamadas encriptadas y arquitectura segura.",
+    "inLanguage": "es",
+    "isPartOf": { "@id": "https://jlgdev.com/#website" },
+    "about": {
+      "@type": "WebApplication",
+      "name": "Sanamente Online",
+      "applicationCategory": "HealthApplication",
+      "url": "https://sanamenteonline.com/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="contenedor-principal">
+    <nav class="navegacion">
+      <a href="/" class="enlace-logo" aria-label="Inicio">
+        <span class="nombre-logo">Leandro Gullo</span>
+        <span class="subtitulo-logo">Full Stack Developer</span>
+      </a>
+    </nav>
+
+    <section class="espacio-proyecto">
+      <a href="/" class="boton-volver">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.71 6.71L10.42 11l4.29 4.29-1.42 1.42-5.71-5.71 5.71-5.71 1.42 1.42z"/></svg>
+        <span>Volver</span>
+      </a>
+
+      <div class="contenido-proyecto">
+        <h1><a href="https://sanamenteonline.com/" target="_blank" rel="noopener noreferrer">Sanamente Online</a></h1>
+        <img src="/assets/SanamenteOnline.gif" alt="Interfaz de Sanamente Online" loading="lazy" decoding="async" />
+
+        <p><strong>Resumen</strong><br>Plataforma web que conecta pacientes con psicólogos para gestionar todo el ciclo de atención: registro, perfiles, agenda y turnos, pagos y retiros, reclamos, calificaciones y administración. Seguridad basada en JWT y control de roles; UI responsive y notificaciones no intrusivas.</p>
+        <div class="contenedor-linea"></div>
+
+        <p><strong>Objetivos</strong><br>• Mejorar el acceso a atención psicológica online de forma segura.<br>• Simplificar la gestión operativa para terapeutas y administrativos.<br>• Centralizar pagos, retiros y métricas del negocio.<br>• Ofrecer una experiencia clara y moderna para pacientes.</p>
+        <div class="contenedor-linea"></div>
+
+        <p><strong>Roles y permisos (RBAC)</strong><br>AD (Administrativo): control total, métricas y operaciones sensibles.<br>TE (Terapeuta): perfil, agenda, retiros y funcionalidades afines.<br>PA (Paciente): perfil, turnos, reclamos y calificaciones.</p>
+        <div class="contenedor-linea"></div>
+
+        <p><strong>Autenticación y seguridad</strong><br>Inicio de sesión con JWT y autorización por roles (middleware requireRol). Rutas sensibles protegidas, validaciones y limpieza de logs sensibles. Cambio de contraseña desde el perfil (paciente y terapeuta).</p>
+        <div class="contenedor-linea"></div>
+
+        <p><strong>Turnos, agendas, pagos y caja</strong><br>CRUD de agendas con JWT; vistas por rol y utilidades de disponibilidad. Expiración de agendas (administrativo). Webhook público para pagos; conciliación, métricas financieras y retiros (aprobación/rechazo). Seguimiento de saldos y movimientos, con estadísticas de administración actualizadas en tiempo real vía WebSockets.</p>
+        <div class="contenedor-linea"></div>
+
+        <p><strong>Sistema de referidos</strong><br>Generación de enlaces/códigos de referidos, tracking de conversiones y aplicación de beneficios/bonificaciones según regla de negocio.</p>
+        <div class="contenedor-linea"></div>
+
+        <p><strong>Reclamos, calificaciones y catálogo</strong><br>CRUD administrado y operaciones autenticadas por turno. Normalización de estados para estadísticas y reportes. Descuentos, obras sociales y tipos de terapia (gestión administrativa).</p>
+        <div class="contenedor-linea"></div>
+
+        <p><strong>Arquitectura y tecnologías</strong><br>Frontend: Next.js + React + TypeScript bajo Atomic Design, React‑Bootstrap, CSS Modules tipados, hooks reutilizables y toasts unificados.<br>Backend: Node.js + Express, JWT, middleware de roles y rutas modulares.<br>Integraciones: Daily API para videollamadas; Mercado Pago y PayPal para pagos.</p>
+        <div class="contenedor-linea"></div>
+
+        <p><strong>Despliegue</strong><br>Desplegado con Docker en VPS, utilizando Nginx como reverse proxy para el dominio <a href="https://sanamenteonline.com/" target="_blank" rel="noopener noreferrer">sanamenteonline.com</a>.</p>
+        <div class="contenedor-linea"></div>
+
+        <p><strong>Calidad, seguridad y mantenibilidad</strong><br>Separación de responsabilidades, validación de entradas y manejo de errores con mensajes claros. Políticas de acceso por rol y protección JWT. Monitoreo de errores en producción con Sentry.</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

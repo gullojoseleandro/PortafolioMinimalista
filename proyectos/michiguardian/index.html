@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Michiguardian · Caso de estudio | Leandro Gullo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/modern-styles.css?v=6" />
+  <meta name="description" content="Caso de estudio de Michiguardian: bóveda de identidades Zero-Knowledge con cifrado AES-256 en cliente, backend Java/Spring Boot y autenticación biométrica. Desarrollada por Leandro Gullo." />
+  <link rel="canonical" href="https://jlgdev.com/proyectos/michiguardian/" />
+  <meta property="og:title" content="Michiguardian · Caso de estudio | Leandro Gullo" />
+  <meta property="og:description" content="Caso de estudio de Michiguardian: bóveda de identidades Zero-Knowledge con cifrado AES-256 en cliente y backend Java/Spring Boot." />
+  <meta property="og:url" content="https://jlgdev.com/proyectos/michiguardian/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Leandro Gullo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://jlgdev.com/proyectos/michiguardian/#webpage",
+    "url": "https://jlgdev.com/proyectos/michiguardian/",
+    "name": "Michiguardian · Caso de estudio",
+    "description": "Caso de estudio de Michiguardian: bóveda de identidades Zero-Knowledge con cifrado AES-256 en cliente, backend Java/Spring Boot y autenticación biométrica.",
+    "inLanguage": "es",
+    "isPartOf": { "@id": "https://jlgdev.com/#website" },
+    "about": {
+      "@type": "WebApplication",
+      "name": "Michiguardian",
+      "applicationCategory": "SecurityApplication",
+      "url": "https://michiguardian.jlgdev.com"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="contenedor-principal">
+    <nav class="navegacion">
+      <a href="/" class="enlace-logo" aria-label="Inicio">
+        <span class="nombre-logo">Leandro Gullo</span>
+        <span class="subtitulo-logo">Full Stack Developer</span>
+      </a>
+    </nav>
+
+    <section class="espacio-proyecto">
+      <a href="/" class="boton-volver">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.71 6.71L10.42 11l4.29 4.29-1.42 1.42-5.71-5.71 5.71-5.71 1.42 1.42z"/></svg>
+        <span>Volver</span>
+      </a>
+
+      <div class="contenido-proyecto">
+        <h1><a href="https://michiguardian.jlgdev.com" target="_blank" rel="noopener noreferrer">Michiguardian</a></h1>
+
+        <p><strong>Resumen</strong><br>Michiguardian es una infraestructura de gestión de secretos y bóveda de identidades diseñada bajo el paradigma de "Zero-Knowledge Architecture". Permite a los usuarios centralizar y resguardar credenciales críticas mediante cifrado de grado militar (AES-256) realizado íntegramente en el cliente, asegurando que ni siquiera el servidor tenga acceso a los datos originales.</p>
+        <div class="contenedor-linea"></div>
+
+        <p><strong>Arquitectura y Backend</strong><br>Backend robusto construido con Java 17 y Spring Boot 3.2.3 bajo los principios de Clean Architecture y DDD. Implementación de Spring Security para una protección por capas, junto con Spring Data JPA para la persistencia eficiente en MySQL.</p>
+        <div class="contenedor-linea"></div>
+
+        <p><strong>Seguridad Avanzada</strong><br>• Cifrado AES-256 realizado íntegramente en el cliente, con derivación de claves via PBKDF2.<br>• Autenticación moderna con JWT (jjwt), Refresh Tokens seguros y hashing de contraseñas con BCrypt.<br>• Rate Limiting de grado industrial mediante Bucket4j para prevenir ataques de fuerza bruta.<br>• Autenticación biométrica sin contraseña (passkeys) con WebAuthn4j, incluyendo flujo de vinculación por QR.<br>• Verificación de contraseñas filtradas (breach-checking) y sanitización dinámica de contenido con JSoup.</p>
+        <div class="contenedor-linea"></div>
+
+        <p><strong>Frontend Moderno</strong><br>• Desarrollado con Next.js 15 y React 19 para una performance excepcional, con soporte PWA.<br>• Animaciones táctiles y transiciones fluidas con GSAP y Framer Motion.<br>• Diseño UI resiliente con Radix UI, Tailwind CSS 4 y gestión de estados con TanStack Query.</p>
+        <div class="contenedor-linea"></div>
+
+        <p><strong>DevOps e Infraestructura</strong><br>• Contenerización del ecosistema completo (Java API + Next.js App) mediante Docker y Docker Compose.</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
